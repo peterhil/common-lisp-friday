@@ -4,7 +4,7 @@
 	<head>
 		<meta charset="utf-8">
 
-		<title>reveal.js - The HTML Presentation Framework</title>
+		<title>Common Lisp Friday — introduction to the programmable programming language</title>
 
 		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
 		<meta name="author" content="Hakim El Hattab">
@@ -13,7 +13,7 @@
 		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+		<link rel="stylesheet" href="css/theme/serif.css" id="theme">
 
 		<!-- For syntax highlighting -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -24,8 +24,8 @@
 		</script>
 
 		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
+		    <script src="lib/js/html5shiv.js"></script>
+		    <![endif]-->
 	</head>
 
 	<body>
@@ -36,303 +36,657 @@
 			<div class="slides">
 
 				<section>
-					<h1>Reveal.js</h1>
-					<h3>HTML Presentations Made Easy</h3>
-				</section>
-
-				<section>
-					<h2>Heads Up</h2>
-					<p>
-						reveal.js is a framework for easily creating beautiful presentations using HTML. You'll need a browser with
-						support for CSS 3D transforms to see it in its full glory.
-					</p>
-					<p>
-						<i><small>- <a href="http://hakim.se">Hakim El Hattab</a> / <a href="http://twitter.com/hakimel">@hakimel</a></small></i>
-					</p>
-
-					<aside class="notes">
-						Oh hey, these are some notes. They'll be hidden in your presentation, but you can see them if you open the speaker notes window (hit 's' on your keyboard).
-					</aside>
-				</section>
-
-				<!-- Example of nested vertical slides -->
-				<section>
-					<section>
-						<h2>Vertical Slides</h2>
-						<p>
-							Slides can be nested inside of other slides,
-							try pressing <a href="#/2/1">down</a>.
-						</p>
-						<a href="#/2/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 1</h2>
-						<p>Press down or up to navigate.</p>
-					</section>
-					<section>
-						<h2>Basement Level 2</h2>
-						<p>Cornify</p>
-						<a class="test" href="http://cornify.com">
-							<img width="280" height="326" src="https://s3.amazonaws.com/hakim-static/reveal-js/cornify.gif" alt="Unicorn">
-						</a>
-					</section>
-					<section>
-						<h2>Basement Level 3</h2>
-						<p>That's it, time to go back up.</p>
-						<a href="#/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section>
-					<h2>Point of View</h2>
-					<p>
-						Press <strong>ESC</strong> to enter the slide overview. Hold down alt and click on any element to zoom in on it using <a href="http://lab.hakim.se/zoom-js">zoom.js</a>. Alt + click anywhere to zoom back out.
-					</p>
-				</section>
-
-				<section>
-					<h2>rvl.io</h2>
-					<p>
-						If you don't like writing slides in HTML you can use the online editor <a href="http://www.rvl.io" target="_blank">rvl.io</a>.
-					</p>
-				</section>
-
-				<section>
-					<h2>Works in Mobile Safari</h2>
-					<p>
-						Try it out! You can swipe through the slides and pinch your way to the overview.
-					</p>
-				</section>
-
-				<section>
-					<h2>Marvelous Unordered List</h2>
-					<ul>
-						<li>No order here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-						<li>Or here</li>
-					</ul>
-				</section>
-
-				<section>
-					<h2>Fantastic Ordered List</h2>
-					<ol>
-						<li>One is smaller than...</li>
-						<li>Two is smaller than...</li>
-						<li>Three!</li>
-					</ol>
-				</section>
-
-				<section data-markdown>
-					<script type="text/template">
-						## Markdown support
-
-						For those of you who like that sort of thing. Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-
-							<section data-markdown>
-							  ## Markdown support
-
-							  For those of you who like that sort of thing.
-							  Instructions and a bit more info available [here](https://github.com/hakimel/reveal.js#markdown).
-							</section>
-					</script>
-				</section>
-
-				<section id="transitions">
-					<h2>Transition Styles</h2>
-					<p>
-						You can select from different transitions, like: <br>
-						<a href="?transition=cube#/transitions">Cube</a> -
-						<a href="?transition=page#/transitions">Page</a> -
-						<a href="?transition=concave#/transitions">Concave</a> -
-						<a href="?transition=zoom#/transitions">Zoom</a> -
-						<a href="?transition=linear#/transitions">Linear</a> -
-						<a href="?transition=none#/transitions">None</a> -
-						<a href="?#/transitions">Default</a>
-					</p>
-				</section>
-
-				<section id="themes">
-					<h2>Themes</h2>
-					<p>
-						Reveal.js comes with a few themes built in: <br>
-						<a href="?theme=sky#/themes">Sky</a> -
-						<a href="?theme=beige#/themes">Beige</a> -
-						<a href="?theme=simple#/themes">Simple</a> -
-						<a href="?theme=serif#/themes">Serif</a> -
-						<a href="?#/themes">Default</a>
-					</p>
-					<p>
-						<small>
-							* Theme demos are loaded after the presentation which leads to flicker. In production you should load your theme in the <code>&lt;head&gt;</code> using a <code>&lt;link&gt;</code>.
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<section data-state="alert">
-						<h2>Global State</h2>
-						<p>
-							Set <code>data-state="something"</code> on a slide and <code>"something"</code>
-							will be added as a class to the document element when the slide is open. This lets you
-							apply broader style changes, like switching the background.
-						</p>
-						<a href="#/7/1" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="blackout">
-						<h2>"blackout"</h2>
-						<a href="#/7/2" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Down arrow">
-						</a>
-					</section>
-					<section data-state="soothe">
-						<h2>"soothe"</h2>
-						<a href="#/7/0" class="image">
-							<img width="178" height="238" src="https://s3.amazonaws.com/hakim-static/reveal-js/arrow.png" alt="Up arrow" style="-webkit-transform: rotate(180deg);">
-						</a>
-					</section>
-				</section>
-
-				<section data-state="customevent">
-					<h2>Custom Events</h2>
-					<p>
-						Additionally custom events can be triggered on a per slide basis by binding to the <code>data-state</code> name.
-					</p>
-					<pre><code contenteditable style="font-size: 18px; margin-top: 20px;">Reveal.addEventListener( 'customevent', function() {
-	console.log( '"customevent" has fired' );
-} );
-					</code></pre>
-				</section>
-
-				<section>
-					<h2>Clever Quotes</h2>
-					<p>
-						These guys come in two forms, inline: <q cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						The nice thing about standards is that there are so many to choose from</q> and block:
-					</p>
-					<blockquote cite="http://searchservervirtualization.techtarget.com/definition/Our-Favorite-Technology-Quotations">
-						For years there has been a theory that millions of monkeys typing at random on millions of typewriters would
-						reproduce the entire works of Shakespeare. The Internet has proven this theory to be untrue.
-					</blockquote>
-				</section>
-
-				<section>
-					<h2>Pretty Code</h2>
-					<pre><code contenteditable>
-function linkify( selector ) {
-  if( supports3DTransforms ) {
-
-    var nodes = document.querySelectorAll( selector );
-
-    for( var i = 0, len = nodes.length; i &lt; len; i++ ) {
-      var node = nodes[i];
-
-      if( !node.className ) ) {
-        node.className += ' roll';
-      }
-    };
-  }
-}
-					</code></pre>
-					<p>Courtesy of <a href="http://softwaremaniacs.org/soft/highlight/en/description/">highlight.js</a>.</p>
-				</section>
-
-				<section>
-					<h2>Intergalactic Interconnections</h2>
-					<p>
-						You can link between slides internally,
-						<a href="#/2/3">like this</a>.
-					</p>
+					<h1>Common Lisp Friday</h1>
+                    <h3>Introduction</h3>
+                    <i><small>by <a href="http://composed.nu/peterhil">Peter Hillerstr&ouml;m</a> / <a href="http://twitter.com/peterhil">@peterhil</a></small></i>
 				</section>
 
 				<section>
 					<section>
-						<h2>Fragmented Views</h2>
-						<p>Hit the next arrow...</p>
-						<p class="fragment">... to step through ...</p>
-						<ol>
-							<li class="fragment"><code>any type</code></li>
-							<li class="fragment"><em>of view</em></li>
-							<li class="fragment"><strong>fragments</strong></li>
-						</ol>
+						<h2>Lisp History</h2>
+
+                        <p>Lisp was invented by <a href="http://en.wikipedia.org/wiki/John_McCarthy_(computer_scientist)" title="John McCarthy (computer scientist)">John McCarthy</a> in 1958 while he was at the <a href="http://en.wikipedia.org/wiki/Massachusetts_Institute_of_Technology" title="Massachusetts Institute of Technology">Massachusetts Institute of Technology</a> (MIT).</p>
+                        <p>McCarthy published it’s design in a paper entitled “Recursive Functions of Symbolic Expressions and Their Computation by Machine, Part I” (<a href="http://www-formal.stanford.edu/jmc/recursive/recursive.html">HTML</a>|<a href="http://www-formal.stanford.edu/jmc/recursive.pdf">PDF</a>) in 1960, in which he showed that with a few simple operators and a notation for functions, one can build a <a href="http://en.wikipedia.org/wiki/Turing-complete" title="Turing-complete" class="mw-redirect">Turing-complete</a> language for algorithms.</p>
+
 					</section>
+                    <section>
+                        <h2>Family of languages</h2>
+                        <p><b>Lisp</b> (historically, <b>LISP</b>) is a family of <a href="http://en.wikipedia.org/wiki/Computer" title="Computer">computer</a> <a href="http://en.wikipedia.org/wiki/Programming_language" title="Programming language">programming languages</a> with a long history and a distinctive, fully parenthesized <a href="http://en.wikipedia.org/wiki/Polish_notation" title="Polish notation">Polish prefix</a> notation.</p>
+                        <p>Originally specified in 1958, Lisp is the second-oldest <a href="http://en.wikipedia.org/wiki/High-level_programming_language" title="High-level programming language">high-level programming language</a> in widespread use today.</p>
+                        <p>Lisp has changed a great deal since its early days, and a number of <a href="http://en.wikipedia.org/wiki/Programming_language_dialect" title="Programming language dialect" class="mw-redirect">dialects</a> have existed over its history.</p>
+                        <aside class="notes">
+                            The oldest being <a href="http://en.wikipedia.org/wiki/Fortran" title="Fortran">Fortran</a>, which is older by one year.
+                        </aside>
+                    </section>
 					<section>
-						<h2>Fragment Styles</h2>
-						<p>There's a few styles of fragments, like:</p>
-						<p class="fragment grow">grow</p>
-						<p class="fragment shrink">shrink</p>
-						<p class="fragment roll-in">roll-in</p>
-						<p class="fragment fade-out">fade-out</p>
-						<p class="fragment highlight-red">highlight-red</p>
-						<p class="fragment highlight-green">highlight-green</p>
-						<p class="fragment highlight-blue">highlight-blue</p>
+						<h2>Lisp Dialects</h2>
+                        <p>Today, the most widely known general-purpose Lisp dialects are <a href="http://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a> and <a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a>.</p>
+                        <table class="wikitable" style="font-size: 0.7em;">
+                            <caption>Timeline of Lisp dialects</caption>
+                            <tr>
+                                <th></th>
+                                <th colspan="1">1955</th>
+                                <th colspan="1">1960</th>
+                                <th colspan="1">1965</th>
+                                <th colspan="1">1970</th>
+                                <th colspan="1">1975</th>
+                                <th colspan="1">1980</th>
+                                <th colspan="1">1985</th>
+                                <th colspan="1">1986</th>
+                                <th colspan="1">1990</th>
+                                <th colspan="1">1995</th>
+                                <th colspan="1">2000</th>
+                                <th colspan="1">2005</th>
+                                <th colspan="1">2012</th>
+                            </tr>
+                            <tr>
+                                <th>Lisp 1.5</th>
+                                <td colspan="3" style="text-align: center; background:lightgray"><strong class="selflink">Lisp 1.5</strong></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                            </tr>
+                            <tr>
+                                <th>Maclisp</th>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="5" style="text-align: center; background:lightgray"><a href="http://en.wikipedia.org/wiki/Maclisp" title="Maclisp">Maclisp</a></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                            </tr>
+                            <tr>
+                                <th>ZetaLisp</th>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="5" style="text-align: center; background:lightgray"><a href="http://en.wikipedia.org/wiki/ZetaLisp" title="ZetaLisp" class="mw-redirect">ZetaLisp</a></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                            </tr>
+                            <tr>
+                                <th>NIL</th>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="2" style="text-align: center; background:lightgray"><a href="http://en.wikipedia.org/wiki/NIL_(programming_language)" title="NIL (programming language)">NIL</a></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                            </tr>
+                            <tr>
+                                <th>Interlisp</th>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="5" style="text-align: center; background:lightgray"><a href="http://en.wikipedia.org/wiki/Interlisp" title="Interlisp">Interlisp</a></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                            </tr>
+                            <tr>
+                                <th>Common&nbsp;Lisp</th>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="7" style="text-align: center; background:lightgray"><a href="http://en.wikipedia.org/wiki/Common_Lisp" title="Common Lisp">Common Lisp</a></td>
+                            </tr>
+                            <tr>
+                                <th>Scheme</th>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="9" style="text-align: center; background:lightgray"><a href="http://en.wikipedia.org/wiki/Scheme_(programming_language)" title="Scheme (programming language)">Scheme</a></td>
+                            </tr>
+                            <tr>
+                                <th>ISLISP</th>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="1"></td>
+                                <td colspan="6" style="text-align: center; background:lightgray"><a href="http://en.wikipedia.org/wiki/ISLISP" title="ISLISP">ISLISP</a></td>
+                            </tr>
+                        </table>
 					</section>
 				</section>
 
-				<section>
-					<h2>Spectacular image!</h2>
-					<a class="image" href="http://lab.hakim.se/meny/" target="_blank">
-						<img width="320" height="299" src="http://s3.amazonaws.com/hakim-static/portfolio/images/meny.png" alt="Meny">
-					</a>
-				</section>
+                <section>
+                    <h2>The parenthesis</h2>
+                    <h3>(S-expressions)</h3>
+                    <img src="http://imgs.xkcd.com/comics/lisp_cycles.png" alt="Xkcd – Lisp cycles"/>
+                </section>
+
+                <section>
+                    <h2>The syntax</h2>
+                    <pre><code class="lisp" contenteditable>(function parameter second-parameter third-parameter)</code></pre>
+                    <pre><code class="lisp" contenteditable>CL-USER> (+ 3 7 5)
+15</code></pre>
+
+                    <div class="fragment">
+                        <pre><code class="lisp" contenteditable>CL-USER> (first (list "a" "b"))
+"a"</code></pre>
+                    </div>
+
+                    <div class="fragment">
+                        <p>Quoting to prevent evaluation (equivalent ways):</p>
+                        <pre><code class="lisp" contenteditable>(quote (a b c))</code></pre>
+                        <pre><code class="lisp" contenteditable>'(a b c)</code></pre>
+                    </div>
+
+                </section>
+
+                <section>
+                    <h2>The vocabulary</h2>
+                    <iframe src="./common-lisp-symbols.html" width="100%" height="100%"></iframe>
+                    <small>
+                        <a href="http://composed.nu/peterhil/code/common-lisp-symbols.html">Link</a> |
+                        <a href="http://www.lispworks.com/documentation/lw50/CLHS/Front/index.htm">The standard in HTML</a>
+                    </small>
+                </section>
+
+                <section>
+                    <h2>What’s in the name?</h2>
+                    <h3>Lisp = List processing language</h3>
+                    <dl>
+                        <dt>Atom</dt>
+                        <dd><pre><code class="lisp" contenteditable>(list t nil 0 0.5 1.0d0 #C(0 1) 'symbol #'function :keyword)</code></pre>
+                        </dd>
+                        <dt>Cons</dt>
+                        <dd>
+                            <pre><code class="lisp" contenteditable>CL-USER> (cons 1 2)
+(1 . 2)</code></pre>
+                        </dd>
+                        <dt>Linked list</dt>
+                        <dd><pre><code class="lisp" contenteditable>(list 42 69 613)
+(cons 42 (cons 69 (cons 613 nil)))</code></pre>
+<img src="http://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Cons-cells.svg/300px-Cons-cells.svg.png"></dd>
+                    </dl>
+                    <small>In the original LISP there were two fundamental data types: atoms and lists</small>
+                </section>
 
 				<section>
-					<h2>Export to PDF</h2>
-					<p>Presentations can be <a href="https://github.com/hakimel/reveal.js#pdf-export">exported to PDF</a>, below is an example that's been uploaded to SlideShare.</p>
-					<iframe id="slideshare" src="http://www.slideshare.net/slideshow/embed_code/13872948" width="455" height="356" style="margin:0;overflow:hidden;border:1px solid #CCC;border-width:1px 1px 0;margin-bottom:5px" allowfullscreen> </iframe>
-					<script>
-						document.getElementById('slideshare').attributeName = 'allowfullscreen';
-					</script>
-				</section>
+					<h1>Common Lisp</h1>
+                    <h2>Language features</h2>
+                </section>
+
+                <section>
+                    <h2>Language features</h2>
+                    <p>Common Lisp is a general-purpose, <a href="http://en.wikipedia.org/wiki/Dynamic_programming_language" title="Dynamic programming language">dynamic</a> <a href="http://en.wikipedia.org/wiki/Multi-paradigm_programming_language" title="Multi-paradigm programming language" class="mw-redirect">multi-paradigm programming language</a>.</p>
+
+                    <div class="fragment">
+                        <p>Common Lisp includes <a href="http://en.wikipedia.org/wiki/Common_Lisp_Object_System" title="Common Lisp Object System">CLOS</a>, an <a href="http://en.wikipedia.org/wiki/Object_system" title="Object system" class="mw-redirect">object system</a> that supports <a href="http://en.wikipedia.org/wiki/Multimethods" title="Multimethods" class="mw-redirect">multimethods</a> and method combinations.</p>
+                    </div>
+
+                    <div class="fragment">
+                        <p>Facilitates evolutionary and <a href="http://en.wikipedia.org/wiki/Iterative_and_incremental_development" title="Iterative and incremental development">incremental software development</a>, with <a href="http://random-state.net/features-of-common-lisp.html#Dynamic_redefinitions">iterative</a> <a href="http://www.common-lisp.net/project/slime/doc/html/Compilation.html#Compilation">compilation</a>* into efficient run-time programs.</p>
+                        <small><sup>*)</sup> With optional type annotation and casting, which can be added later when profiling and optimising. The compiler can be told on a per-module or per-function basis which type safety level is wanted, using <i>optimize</i> declarations.</small>
+                    </div>
+
+                    <div class="fragment">
+                        <p>Extensible through standard features such as Lisp <a href="http://en.wikipedia.org/wiki/Macro_(computer_science)" title="Macro (computer science)">macros`</a> and reader macros#.</p>
+                        <small>
+                            <sup>`)</sup> Compile-time code rearrangement accomplished by the program itself.<br/>
+                            <sup>#)</sup> Extension of syntax to give special meaning to characters reserved for this purpose.
+                        </small>
+                    </div>
+                </section>
+
+                <section>
+                    <h2>Functional programming</h2>
+                    <h3>Defining functions</h3>
+                    <p>Function definition:</p>
+                    <pre><code class="lisp" contenteditable>(defun name (parameter*)
+  "Optional documentation string."
+  body-form*)</code></pre>
+                    <small>
+                        <dl>
+                            <div class="fragment">
+                                <dt><b>Name</b></dt>
+                                <dd>can be any symbol.</dd>
+                            </div>
+                            <div class="fragment">
+                                <dt><b>Parameter list</b></dt>
+                                <dd>defines the variables that will be used to hold the arguments passed to the function when it’s called. Different flavors of parameters handle required, optional, multiple, and keyword arguments.</dd>
+                            </div>
+                            <div class="fragment">
+                                <dt><b>Documentation string</b></dt>
+                                <dd>will be associated with the name of the function and can later be obtained using the <code>DOCUMENTATION</code> function.</dd>
+                            </div>
+                            <div class="fragment">
+                                <dt><b>Body</b></dt>
+                                <dd>of a <code>DEFUN</code> consists of any number of Lisp expressions. They will be evaluated in order when the function is called and the value of the last expression is returned as the value of the function. The <code>RETURN-FROM</code> special operator can be used to return immediately from anywhere in a function.</dd>
+                            </div>
+                        </dl>
+                    </small>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>First-class functions</h2>
+
+                        <p><a href="http://en.wikipedia.org/wiki/First-class_function" title="First-class function">First-class functions</a> are functions that take other functions as arguments or return functions.</p>
+
+                        <h3>Referring functions</h3>
+                        <p>To be able to pass functions around, you need to refer to a function value of a symbol using <code>function</code>:</p>
+                        <pre><code class="lisp" contenteditable>CL-USER> (function >)
+#&lt;FUNCTION >>
+CL-USER> #'>
+#&lt;FUNCTION >></code></pre>
+                        <small>The #' notation is a Common Lisp shortcut way of the above and more commonly used.</small>
+
+                        <div class="fragment">
+                            <p>Sort a list using the &gt; and &lt; function:</p>
+                            <pre><code class="lisp" contenteditable>CL-USER> (sort (list 5 2 6 3 1 4) #'>)
+(6 5 4 3 2 1)
+CL-USER> (sort (list 5 2 6 3 1 4) #'&lt;)
+(1 2 3 4 5 6)</code></pre>
+                        </div>
+                    </section>
+
+                    <section>
+                        <h2>First-class functions</h2>
+                        <h4>First class functions make it possible to<br/>describe very general operations.</h4>
+
+                        <p>Sort a list according to the first element of each sub-list:</p>
+                        <pre><code class="lisp" contenteditable>CL-USER> (sort (list '(9 "A") '(3 "B") '(4 "C")) #'< :key #'first)
+((3 "B") (4 "C") (9 "A"))
+</code></pre>
+
+                        <p>Sort by the second element of each sub-list:</p>
+                        <pre><code class="lisp" contenteditable>CL-USER> (sort (list '(9 "A") '(3 "B") '(4 "C")) #'string< :key #'second)
+((9 "A") (3 "B") (4 "C"))
+</code></pre>
+                        <small>The function #'second is an alias for #'cadr, which<br/>in turn is equivalent to (car (cdr (list FOO BAR))), in this case BAR.</small>
+                    </section>
+
+                    <section>
+                        <h2>First-class functions</h2>
+                        <h3>Another example</h3>
+                        <p>Sort <a href="http://en.wikipedia.org/wiki/Trie">trie</a> branches with a predicate.</p>
+                        <pre style="font-size: 0.5em;"><code class="lisp" contenteditable>(defun sort-trie-branch (trie predicate &key (key #'key) (stable nil))
+  "Sort a trie node’s branches with a predicate function."
+  (let ((branches (copy-list (branches trie)))
+        (sort (if stable #'stable-sort #'sort)))
+    (setf (branches trie)
+          (funcall sort branches predicate :key key))
+    trie))
+                        </code></pre>
+                        <small>Using this function while traversing the trie, the whole tree can be sorted.</small>
+                        <small class="fragment">But this is a bad example for functional programming. Can you tell why?</small>
+
+                        <small class="fragment">It modifies the trie in-place, which is unacceptable in functional programming.<br/>It should instead generate a new trie instance by copying it.</small>
+                    </section>
+                </section>
+
+                <section>
+                    <h2>Functional programming</h2>
+                    <h3>Anonymous functions</h3>
+                    <p>Defined by lambda expressions:</p>
+                    <pre><code class="lisp" contenteditable>(lambda (parameters) body)</code></pre>
+
+                    <small>One way to think of <code>LAMBDA</code> expressions is as a special kind of function name where the name itself directly describes what the function does. This explains why you can use a <code>LAMBDA</code> expression in the place of a function name with #':</small>
+                    <pre><code class="lisp" contenteditable>(funcall #'(lambda (x y) (+ x y)) 2 3) ⇒ 5</code></pre>
+
+                        <small>You can even use a <code>LAMBDA</code> expression as the "name" of a function in a function call expression. If you wanted, you could write the previous <code>FUNCALL</code> expression more concisely:</small>
+                        <pre><code class="lisp" contenteditable>((lambda (x y) (+ x y)) 2 3) ⇒ 5</code></pre>
+
+                        <small>An important use of <code>LAMBDA</code> expressions is in making closures, functions that capture part of the environment where they're created.</small>
+                </section>
+
+                <section>
+                    <section>
+                        <h4>Functional programming:<br/>Higher-order functions and sequences</h4>
+                        <h2>Map and reduce</h2>
+                        <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_map.htm"><code>MAP</code></a></p>
+                        <pre><code class="lisp" contenteditable>(map 'list #'* '(1 2 3) '(4 5 6)) ⇒ (4 10 18)</code></pre>
+
+                        <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_reduce.htm"><code>REDUCE</code></a></p>
+                        <pre><code class="lisp" contenteditable>(reduce #'* '(1 2 3 4 5)) ⇒ 120</code></pre>
+
+                        <p><a href="http://www.lispworks.com/documentation/HyperSpec/Body/f_mapc_.htm"><code>MAPC</code>, <code>MAPCAR</code>, <code>MAPCAN</code>, <code>MAPL</code>, <code>MAPLIST</code> and <code>MAPCON</code></a></p>
+                        <pre><code class="lisp" contenteditable>mapc function &rest lists+ ⇒ list-1
+mapcar function &rest lists+ ⇒ result-list
+mapcan function &rest lists+ ⇒ concatenated-results
+mapl function &rest lists+ ⇒ list-1
+maplist function &rest lists+ ⇒ result-list
+mapcon function &rest lists+ ⇒ concatenated-results</code></pre>
+                    </section>
+
+                    <section>
+                        <h4>Functional programming:<br/>Higher-order functions and sequences</h4>
+                        <h2>Folds</h2>
+                        <caption>Different kind of folds using reduce:</caption>
+
+                        <table style="font-size: 0.77em;" width="100%">
+                            <tr>
+                                <th style="text-align: right; width: 20%;">
+                                    Left fold <small style="vertical-align: baseline;">without initial value</small>
+                                </th>
+                                <td><pre><code class="lisp" contenteditable>(reduce <i>func</i> <i>list</i>)
+CL-USER> (reduce #'pair (range 1 6))
+"((((1 + 2) + 3) + 4) + 5)"</code></pre></td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: right;">
+                                    Right fold <small style="vertical-align: baseline;">without initial value</small>
+                                </th>
+                                <td><pre><code class="lisp" contenteditable>(reduce <i>func</i> <i>list</i>&nbsp;:from-end t)
+CL-USER> (reduce #'pair (range 1 6) :from-end t)
+"(1 + (2 + (3 + (4 + 5))))"</code></pre></td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: right;">Left fold</th>
+                                <td><pre><code class="lisp" contenteditable>(reduce <i>func</i> <i>list</i>&nbsp;:initial-value <i>initval</i>)
+CL-USER> (reduce #'pair (range 1 6) :initial-value 0)
+"(((((0 + 1) + 2) + 3) + 4) + 5)"</code></pre></td>
+                            </tr>
+                            <tr>
+                                <th style="text-align: right;">Right fold</th>
+                                <td><pre><code class="lisp" contenteditable>(reduce <i>func</i> <i>list</i>&nbsp;:from-end t&nbsp;:initial-value <i>initval</i>)
+CL-USER> (reduce #'pair (range 1 6) :initial-value 0 :from-end t)
+"(1 + (2 + (3 + (4 + (5 + 0)))))"</code></pre></td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td>
+                                    <pre style="font-size: 0.55em;"><code class="lisp" contenteditable>(defun range (start end) (loop for i from start below end collect i))
+(defun pair (x y &optional (op #\+)) (format nil "(~A ~A ~A)" x op y))</code></pre>
+                                </td>
+                                </tr>
+                        </table>
+                    </section>
+
+                    <section>
+                        <h4>Functional programming:<br/>Higher-order functions and sequences</h4>
+                        <h2>Filter</h2>
+                        <caption>Filter with <code>REMOVE-IF</code>:</caption>
+                        <pre><code class="lisp" contenteditable>(remove-if inverted-pred list)
+(remove-if (complement pred) list)
+(remove-if-not pred list)</code></pre>
+                        <small>Note! The function <code>remove-if-not</code> has been deprecated in favor of the equivalent <code>remove-if</code> where the predicate is complemented.</small>
+                    </section>
+
+                    <section>
+                        <h4>Functional programming:<br/>Higher-order functions and sequences</h4>
+                        <h2>Zip</h2>
+                        <p><a href="http://en.wikipedia.org/wiki/Zip_(higher-order_function)#In_programming_languages">Zip and Unzip</a> can be made using Mapcar:</p>
+                        <pre><code class="lisp" contenteditable>CL-USER> (defparameter nums '(1 2 3))
+CL-USER> (defparameter tens '(10 20 30))
+CL-USER> (defparameter firstname "Alice")
+
+;; Zips
+CL-USER> (mapcar #'list nums tens)
+((1 10) (2 20) (3 30))
+
+CL-USER> (mapcar #'list nums tens (coerce firstname 'list))
+((1 10 #\A) (2 20 #\l) (3 30 #\i)) — truncates on shortest list
+
+;; Unzips
+CL-USER> (apply #'mapcar #'list (mapcar #'list nums tens (coerce firstname 'list)))
+((1 2 3) (10 20 30) (#\A #\l #\i))</code></pre>
+                    </section>
+
+                </section>
+
+                <section>
+                    <section>
+                        <h3>Object oriented features</h3>
+                        <h2>Common Lisp<br/>Object System</h2>
+                        <div>
+                            <dl>
+                                <dt class="fragment"><a href="http://www.aiai.ed.ac.uk/~jeff/clos-guide.html#instances">Instances are created by a function</a></dt>
+                                <dt class="fragment"><a href="http://www.gigamonkeys.com/book/object-reorientation-classes.html#object-initialization">Automatic</a> and <a href="http://www.gigamonkeys.com/book/object-reorientation-classes.html#accessor-functions">custom accessor functions</a></dt>
+                                <dt class="fragment"><a href="http://www.gigamonkeys.com/book/object-reorientation-classes.html#multiple-inheritance">Multiple inheritance</a></dt>
+                                <dt class="fragment"><a href="http://www.aiai.ed.ac.uk/~jeff/clos-guide.html#slots">Inheritance of slot options</a></dt>
+                                <dt class="fragment"><a href="http://www.gigamonkeys.com/book/object-reorientation-classes.html#with-slots-and-with-accessors">Slots can be modified programmatically</a></dt>
+                                <dt class="fragment"><a href="http://www.aiai.ed.ac.uk/~jeff/clos-guide.html#generic">Generic functions and methods</a> (multimethods)</dt>
+                                <dt class="fragment"><a href="http://www.aiai.ed.ac.uk/~jeff/clos-guide.html#meth-comb">Method combination</a></dt>
+                                <dt class="fragment">Meta-programming with <a href="http://en.wikipedia.org/wiki/Metaobject">Meta object</a> <a href="http://en.wikipedia.org/wiki/Metaobject#Metaobject_protocol">Protocol (MOP)</a></dt>
+                            </dl>
+                        </div>
+                        <small>For a good introduction about these features, read<br/><a href="http://www.aiai.ed.ac.uk/~jeff/clos-guide.html#slots">A brief guide to CLOS</a> by Jeff Dalton.</small>
+                    </section>
+
+                    <section>
+                        <h3>Common Lisp Object System</h3>
+                        <h2>Instances</h2>
+                        <dl>
+                            <dt><code>defclass</code></dt>
+                            <dd>Define a class</dd>
+                            <pre><code class="lisp" contenteditable>(defclass person ()
+  ((name :accessor person-name
+         :initform 'bill
+         :initarg :name)
+   (age :accessor person-age
+        :initform 10
+        :initarg :age)))
+                            </code></pre>
+                        </dl>
+                    </section>
+
+                    <section>
+                        <h3>Common Lisp Object System</h3>
+                        <h2>Instances</h2>
+                        <dl>
+                            <dd><a href="http://www.aiai.ed.ac.uk/~jeff/clos-guide.html#instances"
+                                   >Create an instance with function</a></dd>
+                            <dt><code>make-instance</code></dt>
+                            <pre><code class="lisp" contenteditable>(make-instance 'person :name 'jill :age 100)</code></pre>
+                            <small>It’s often a good idea to define your own constructor functions, rather than call <code>make-instance</code> directly, because you can hide implementation details and don't have to use keyword parameters for everything:</small>
+
+                            <pre><code class="lisp" contenteditable>(defun make-person ((name 'bill) (age 10))
+  (make-instance 'person :name name :age age))</code></pre>
+                            <pre><code class="lisp" contenteditable>(make-person 'jill 100)</code></pre>
+                            <dd>Instance creation can be customised with</dd>
+                            <dt><code>initialize-instance</code></dt>
+                        </dl>
+                    </section>
+                </section>
 
 				<section>
-					<h2>Take a Moment</h2>
-					<p>
-						Press b or period on your keyboard to enter the 'paused' mode. This mode is helpful when you want to take disctracting slides off the screen
-						during a presentation.
-					</p>
+                    <h2>Macros</h2>
+					<h3>The programmable<br/>programming language</h3>
+
+                    <p>The definition of <code>DEFMACRO</code>:</p>
+                    <pre><code class="lisp" contenteditable>(defmacro name (parameter*)
+  "Optional documentation string."
+  body-form*)</code></pre>
+                    <small>...is very similar to that of <code>DEFUN</code>.</small>
+                    <div class="fragment">
+                        <small>The big difference is the backquote syntax, as seen in the following macro example:</small>
+                        <pre><code class="lisp" contenteditable>(defmacro do-primes ((var start end) &body body)
+  `(do ((,var (next-prime ,start) (next-prime (1+ ,var))))
+       ((> ,var ,end))
+     ,@body))</code></pre>
+
+                        <small>A useful way to think about the backquote syntax is as a particularly concise way of writing code that generates lists. For instance, <code>`(,a b)</code> might be read as <code>(list a 'b)</code></small>
+
+                        <p>Read <a href="http://www.gigamonkeys.com/book/macros-defining-your-own.html">Macros Defining Your Own</a> for more information.</p>
+                    </div>
 				</section>
 
-				<section>
-					<h2>Stellar Links</h2>
-					<ul>
-						<li><a href="https://github.com/hakimel/reveal.js">Source code on GitHub</a></li>
-						<li><a href="http://hakim.se/projects/reveal-js">Leave feedback on my site</a></li>
-						<li><a href="http://twitter.com/hakimel">Follow me on Twitter</a></li>
-					</ul>
+                <section>
+                    <h2>Useful Resources</h2>
+                    <a href="http://www.lispworks.com/documentation/lw50/CLHS/Front/index.htm">The Common Lisp HyperSpec</a>
+                    <a href="http://www.cliki.net/">Cliki – The Common Lisp Wiki</a>
+                    <p>The book <a href="http://www.gigamonkeys.com/book/">“Practical Common Lisp”</a> by <a href="http://www.gigamonkeys.com/resume/">Peter Siebel</a></p>
+                </section>
+
+                <section>
+                    <section>
+                        <h2>Take this REPL,<br/>my brother and may<br/>it serve you well!</h2>
+                        <h3>Instructions for the hackathon</h3>
+
+                        <small>There are many implementations of the ANSI Common Lisp standard, two implementations 
+that you can use in the hackathon are SBCL and Clozure Common Lisp.</small>
+
+                        <p>If you feel confident using basic Emacs editing command, I recommend using SBCL with Emacs and SLIME.
+                            Otherwise I recommend installing Clozure CL.</p>
+
+                        <p>Also install <a href="http://www.quicklisp.org/beta/">Quicklisp</a> if using either Common Lisp implementation.</p>
+				    </section>
+
+                    <section>
+                        <h2>Steps for installing SBCL with SLIME and Emacs</h2>
+
+                        <p>SBCL is acronym for Steel Bank Common Lisp.<br/>
+                            SLIME is acronym for Superior Lisp Interaction Mode for Emacs.</p>
+
+                        <h3>1) Install SBCL</h3>
+                        <p>➜ sudo port install sbcl</p>
+				    </section>
+
+                    <section>
+                        <h2>2a) Install SLIME and Emacs using Macports</h2>
+                        <p>There are two alternative methods of installing SLIME.</p>
+
+                        <p>Install SLIME with MacPorts or apt-get<br/>(will also install emacs and Emacs.app)</p>
+                        <pre><code>➜ sudo port install slime</code></pre>
+                        <p>Copy <a href="../../dot.emacs">dot.emacs</a> into <code>~/.emacs</code> to have the settings for SLIME as described by the port install</p>
+                    </section>
+
+                    <section>
+                        <h2>2b) Install SLIME and Emacs using Quicklisp</h2>
+                        <p>There are two alternative methods of installing SLIME.</p>
+
+                        <p>Install Quicklisp <a href="#/17">(see instructions)</a></p>
+                        <p>Type within Lisp REPL:</p>
+                        <pre><code>* (ql:quickload "quicklisp-slime-helper")</code></pre>
+
+                        <p>Add this to your ~/.emacs:</p>
+
+                        <pre><code>(load (expand-file-name "~/quicklisp/slime-helper.el"))
+;; Replace "sbcl" with the path to your implementation
+(setq inferior-lisp-program "sbcl")</code></pre>
+				    </section>
+
+                    <section>
+                        <h2>3) Optionally install Aquamacs</h2>
+
+                        <ul>
+                            <li>Download Aquamacs from <a href="http://aquamacs.org/">http://aquamacs.org/</a></li>
+                            <li>Drag into /Applications</li>
+                        </ul>
+				    </section>
+
+                    <section>
+                        <h2>4) Start SLIME with SBCL</h2>
+
+                        <pre><code>➜ open -a /Applications/MacPorts/Emacs.app</code></pre>
+                        <small>OR</small>
+                        <pre><code>➜ open -a /Applications/Aquamacs.app</code></pre>
+
+                        <p>Type in Emacs or Aquamacs:</p>
+	                    <pre><code>meta-x slime</code></pre>
+                        <small>(meta key is usually mapped to option, tapping ESC before the key also works)</small>
+				    </section>
 				</section>
 
-				<section>
-					<h2>It's free</h2>
-					<p>
-						reveal.js and <a href="http://www.rvl.io">rvl.io</a> are entirely free but if you'd like to support the projects you can donate below.
-						Donations will go towards hosting and domain costs.
-					</p>
-					<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-						<input type="hidden" name="cmd" value="_donations">
-						<input type="hidden" name="business" value="hakim.elhattab@gmail.com">
-						<input type="hidden" name="lc" value="US">
-						<input type="hidden" name="item_name" value="reveal.js / rvl.io">
-						<input type="hidden" name="no_note" value="0">
-						<input type="hidden" name="currency_code" value="USD">
-						<input type="hidden" name="bn" value="PP-DonationsBF:btn_donate_LG.gif:NonHostedGuest">
-						<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-					</form>
+                <section>
+                    <section>
+                        <h2>Steps for installing Clozure Common Lisp (CCL)</h2>
+                        <small>Takes ~30 min. with hassling around and<br/>asking questions and/or googling.</small>
+
+                        <p>1) Check out Clozure Common Lisp from the Subversion <small>[~2-3 min]</small></p>
+                        <pre><code>➜ svn co http://svn.clozure.com/publicsvn/openmcl/release/1.8/darwinx86/ccl</code></pre>
+				    </section>
+
+                    <section>
+                        <h3>2) Build it</h3>
+                        <small>[~5 min]</small>
+
+                        <pre><code class="lisp">➜ cd ccl
+➜ ./dx86cl64 --no-init
+Welcome to Clozure Common Lisp Version 1.8-r15286M  (DarwinX8664)!
+? (rebuild-ccl :full t)
+; lots of output
+? (quit)</code></pre>
+				    </section>
+
+                    <section>
+                        <h3>3) Install the command line start script and set the ccl directory env variable</h3>
+                        <small>[~1 min]</small>
+
+                        <pre><code>➜ sudo cp scripts/ccl64 /usr/local/bin
+➜ export CCL_DEFAULT_DIRECTORY="`pwd`"  # put this into .zshrc or .bashrc
+➜ echo $CCL_DEFAULT_DIRECTORY         
+/Users/peterhil/Programming/Lisp/ccl
+➜ rehash  # if using zsh</code></pre>
+				    </section>
+
+                    <section>
+                        <h3>4) Build the Cocoa IDE</h3>
+                        <small>[~ 1 min]</small>
+
+                        <pre><code>➜ ccl64
+Welcome to Clozure Common Lisp Version 1.8-r15485M  (DarwinX8664)!
+? (require :cocoa-application)
+; lots of output
+➜ open Clozure\ CL64.app/</code></pre>
+				    </section>
+
+                    <section>
+                        <h3>5) Optional – start CCL inside Emacs or Aquamacs using SLIME:</h3>
+
+                        <p>Install SLIME as described in SBCL instructions above.</p>
+
+                        <small>In Emacs or Aquamacs type:</small>
+	                    <pre><code>meta-- meta-x slime RETURN
+ccl64</code></pre>
+                        <small>(meta key is usually mapped to option, tapping ESC before the key also works)</small>
+				    </section>
+
 				</section>
 
-				<section>
-					<h1>THE END</h1>
-					<h3>BY Hakim El Hattab / hakim.se</h3>
-				</section>
+                <section>
+                    <h2>Steps for installing <a href="http://www.quicklisp.org/beta/">Quicklisp</a></h2>
+
+                    <pre><code>➜ cd ~
+➜ curl -O http://beta.quicklisp.org/quicklisp.lisp
+➜ sbcl --load quicklisp.lisp  # replace sbcl with ccl64 if using Clozure CL
+* (quicklisp-quickstart:install)</code></pre>
+
+                    <pre><code>; Try to install some package (CL-PPCRE is a regexp library written by Edi Weitz):
+* (ql:quickload "cl-ppcre")</code></pre>
+
+                    <pre><code>; Search for available libraries:
+* (ql:system-apropos "vecto")</code></pre>
+
+                    <pre><code>; Add Quicklisp to your Lisp's init file:
+* (ql:add-to-init-file)</code></pre>
+
+                    <pre><code>; Done
+* (quit)</code></pre>
+                </section>
 
 			</div>
-
 		</div>
 
 		<script src="lib/js/head.min.js"></script>
@@ -343,22 +697,22 @@ function linkify( selector ) {
 			// Full list of configuration options available here:
 			// https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
+			controls: true,
+			progress: true,
+			history: true,
 
-				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
-				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
+			theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+			transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/none
 
-				// Optional libraries used to extend on reveal.js
-				dependencies: [
-					{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
-					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
-				]
+			// Optional libraries used to extend on reveal.js
+			dependencies: [
+			{ src: 'lib/js/highlight.js', async: true, callback: function() { window.hljs.initHighlightingOnLoad(); } },
+			{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+			{ src: 'lib/js/showdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'lib/js/data-markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+			{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+			{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } }
+			]
 			});
 		</script>
 
